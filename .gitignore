@@ -1,0 +1,5 @@
+*.swp
+session-*.vim
+undo/*
+.cache/
+lazy-lock.json
