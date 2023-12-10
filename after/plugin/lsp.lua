@@ -24,7 +24,8 @@ require('mason-lspconfig').setup({
         'lua_ls',
         'jdtls',
 --'java_language_server',
-        'sqlls'
+        'sqlls';
+        'nil_ls'
     },
   handlers = {
     lsp_zero.default_setup,
