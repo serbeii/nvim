@@ -27,6 +27,8 @@ require('mason-lspconfig').setup({
         'volar',
         'jedi_language_server',
         'sqlls',
+        'docker_compose_language_service',
+        'dockerls',
     },
     handlers = {
         lsp_zero.default_setup,
