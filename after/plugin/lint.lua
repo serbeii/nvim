@@ -1,6 +1,10 @@
 require('mason-tool-installer').setup({
     ensure_installed = {
-        'sonarlint-language-server'
+        'sonarlint-language-server',
+        'prettier',
+        'clang-format',
+--        'luaformatter',
+        'autopep8',
     }
 })
 
