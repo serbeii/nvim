@@ -24,9 +24,9 @@ formatter.setup({
             function()
                 return {
                     exe = "clang-format",
-                    args = { "--style=Google", "--assume-filename=" .. vim.api.nvim_buf_get_name(0) },
+                    args = {"--style=\"{BasedOnStyle: Google, IndentWidth: 4}\"" ,"--assume-filename=" .. vim.api.nvim_buf_get_name(0)},
                     stdin = true,
-                    cwd = vim.fn.expand('%:p:h') -- Run clang-format in the directory of the current file
+                    cwd = vim.fn.expand('%:p:h'), -- Run clang-format in the directory of the current file
                 }
             end
         },
