@@ -1,11 +1,18 @@
+A simple neovim configuration I use as my daily driver.
+
 TODO:
 
-    fill this up
+   [] fill this up
     
-    add function <leader>qq to go back to the previous file. make the "previous file" update whenever :q or :Explore is executed
-    
-    make the boot up faster if possible
+   [] make the boot up faster if possible
+
+   [] add in dap support
+
+   [] fix java lombok
+
+   [] fix and add formatters
+
+   [] make a list of dependencies
 
 *based on The Primeagen's config
 *https://github.com/ThePrimeagen/init.lua/tree/master
-
