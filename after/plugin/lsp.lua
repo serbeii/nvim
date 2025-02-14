@@ -25,6 +25,7 @@ require('mason-lspconfig').setup({
         'lua_ls',
         'jdtls',
         'volar',
+        'rust_analyzer',
         'jedi_language_server',
         'sqlls',
         'docker_compose_language_service',

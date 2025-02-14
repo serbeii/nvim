@@ -6,7 +6,7 @@ formatter.setup({
             function()
                 return {
                     exe = "prettier",
-                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote", "--print-width=90", "--tab-width=4" },
+                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote", "--print-width=80", "--tab-width=4" },
                     stdin = true
                 }
             end
@@ -15,7 +15,16 @@ formatter.setup({
             function()
                 return {
                     exe = "prettier",
-                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--quote=double", "--print-width=90", "--tab-width=2" },
+                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote", "--print-width=80", "--tab-width=4" },
+                    stdin = true
+                }
+            end
+        },
+        vue = {
+            function()
+                return {
+                    exe = "prettier",
+                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote", "--print-width=80", "--tab-width=4" },
                     stdin = true
                 }
             end
@@ -44,7 +53,7 @@ formatter.setup({
             function()
                 return {
                     exe = "autopep8",
-                    args = { "--indent-size=4", "--max-line-length=90" },
+                    args = { "--indent-size=4", "--max-line-length=80" },
                     stdin = true
                 }
             end
@@ -53,7 +62,7 @@ formatter.setup({
             function()
                 return {
                     exe = "prettier",
-                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--print-width=90", "--tab-width=4" },
+                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote", "--print-width=80", "--tab-width=4" },
                     stdin = true
                 }
             end
@@ -62,7 +71,7 @@ formatter.setup({
             function()
                 return {
                     exe = "prettier",
-                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--print-width=90", "--tab-width=4" },
+                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote", "--print-width=80", "--tab-width=4" },
                     stdin = true
                 }
             end
@@ -71,7 +80,7 @@ formatter.setup({
             function()
                 return {
                     exe = "prettier",
-                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote", "--print-width=90", "--tab-width=4" },
+                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote", "--print-width=80", "--tab-width=4" },
                     stdin = true
                 }
             end
@@ -80,7 +89,7 @@ formatter.setup({
             function()
                 return {
                     exe = "prettier",
-                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--print-width=90", "--tab-width=4" },
+                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote", "--print-width=80", "--tab-width=4" },
                     stdin = true
                 }
             end
@@ -89,7 +98,7 @@ formatter.setup({
 --            function()
 --                return {
 --                    exe = "luaformatter",
---                    args = { "--indent-width=4", "--column-limit=90" },
+--                    args = { "--indent-width=4", "--column-limit=80" },
 --                    stdin = true
 --                }
 --            end
