@@ -29,11 +29,20 @@ formatter.setup({
                 }
             end
         },
+        html = {
+            function()
+                return {
+                    exe = "prettier",
+                    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote", "--print-width=80", "--tab-width=4" },
+                    stdin = true
+                }
+            end
+        },
         c = {
             function()
                 return {
                     exe = "clang-format",
-                    args = {"--style=\"{BasedOnStyle: Google, IndentWidth: 4}\"" ,"--assume-filename=" .. vim.api.nvim_buf_get_name(0)},
+                    args = { "--style=\"{BasedOnStyle: Google, IndentWidth: 4}\"", "--assume-filename=" .. vim.api.nvim_buf_get_name(0) },
                     stdin = true,
                     cwd = vim.fn.expand('%:p:h'), -- Run clang-format in the directory of the current file
                 }
@@ -94,15 +103,15 @@ formatter.setup({
                 }
             end
         },
---        lua = {
---            function()
---                return {
---                    exe = "luaformatter",
---                    args = { "--indent-width=4", "--column-limit=80" },
---                    stdin = true
---                }
---            end
---        },
+        --        lua = {
+        --            function()
+        --                return {
+        --                    exe = "luaformatter",
+        --                    args = { "--indent-width=4", "--column-limit=80" },
+        --                    stdin = true
+        --                }
+        --            end
+        --        },
     },
     logging = false -- Disable logging for faster performance
 })
