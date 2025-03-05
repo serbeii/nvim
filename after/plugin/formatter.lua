@@ -165,7 +165,7 @@ formatter.setup ({
 			function ()
 				return {
 					exe = 'tex-fmt',
-					args = { '-t 4', vim.api.nvim_buf_get_name (0) },
+					args = { '-t 4', '-p', vim.api.nvim_buf_get_name (0) },
 					stdin = true,
 				}
 			end,
