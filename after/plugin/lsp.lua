@@ -45,11 +45,11 @@ require ('mason-lspconfig').setup ({
 		'jdtls',
 		'volar',
 		'rust_analyzer',
-		'jedi_language_server',
 		'sqlls',
 		'docker_compose_language_service',
 		'dockerls',
 		'texlab',
+		'pylyzer',
 	},
 	handlers = {
 		lsp_zero.default_setup,
