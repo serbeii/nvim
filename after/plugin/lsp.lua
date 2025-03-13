@@ -49,7 +49,8 @@ require ('mason-lspconfig').setup ({
 		'docker_compose_language_service',
 		'dockerls',
 		'texlab',
-		'pylyzer',
+		--'pylyzer',
+        'jedi_language_server',
 	},
 	handlers = {
 		lsp_zero.default_setup,
