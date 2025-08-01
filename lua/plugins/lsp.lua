@@ -3,7 +3,6 @@ return {
 	opts = function()
 		local keys = require("lazyvim.plugins.lsp.keymaps").get()
 		keys[#keys + 1] = {
-			"n",
 			"gd",
 			function()
 				vim.lsp.buf.definition()
@@ -11,7 +10,6 @@ return {
 			desc = "Go to definition",
 		}
 		keys[#keys + 1] = {
-			"n",
 			"K",
 			function()
 				vim.lsp.buf.hover()
@@ -19,7 +17,6 @@ return {
 			desc = "Hover",
 		}
 		keys[#keys + 1] = {
-			"n",
 			"<leader>vws",
 			function()
 				vim.lsp.buf.workspace_symbol()
@@ -27,7 +24,6 @@ return {
 			desc = "workspace_symbol",
 		}
 		keys[#keys + 1] = {
-			"n",
 			"<leader>vd",
 			function()
 				vim.diagnostic.open_float()
@@ -35,7 +31,6 @@ return {
 			desc = "open_float",
 		}
 		keys[#keys + 1] = {
-			"n",
 			"<leader>vca",
 			function()
 				vim.lsp.buf.code_action()
@@ -43,7 +38,6 @@ return {
 			desc = "View code actions",
 		}
 		keys[#keys + 1] = {
-			"n",
 			"<leader>vrr",
 			function()
 				vim.lsp.buf.references()
@@ -51,7 +45,6 @@ return {
 			desc = "References",
 		}
 		keys[#keys + 1] = {
-			"n",
 			"<leader>vrn",
 			function()
 				vim.lsp.buf.rename()
@@ -59,7 +52,7 @@ return {
 			desc = "Rename",
 		}
 		keys[#keys + 1] = {
-			"i",
+			mode = { "n" },
 			"<C-h>",
 			function()
 				vim.lsp.buf.signature_help()
