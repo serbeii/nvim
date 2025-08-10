@@ -1,31 +1,32 @@
-require("mason-tool-installer").setup({
+require ('mason-tool-installer').setup ({
 	ensure_installed = {
-		"sonarlint-language-server",
-		"js-debug-adapter",
-		"prettier",
-		"clang-format",
-		"autopep8",
-		"tex-fmt",
+		'sonarlint-language-server',
+		'js-debug-adapter',
+		'prettier',
+		'clang-format',
+		'autopep8',
+		'tex-fmt',
+		'stylua',
 	},
 })
 
-require("sonarlint").setup({
+require ('sonarlint').setup ({
 	server = {
 		cmd = {
-			"sonarlint-language-server",
+			'sonarlint-language-server',
 			-- Ensure that sonarlint-language-server uses stdio channel
-			"-stdio",
-			"-analyzers",
+			'-stdio',
+			'-analyzers',
 			-- paths to the analyzers you need, using those for python and java in this example
-			vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarpython.jar"),
-			vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarcfamily.jar"),
+			vim.fn.expand ('$MASON/share/sonarlint-analyzers/sonarpython.jar'),
+			vim.fn.expand ('$MASON/share/sonarlint-analyzers/sonarcfamily.jar'),
 			-- vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarjava.jar"),
 		},
 	},
 	filetypes = {
 		-- Tested and working
-		"python",
-		"cpp",
+		'python',
+		'cpp',
 		-- 'java',
 	},
 })

@@ -16,7 +16,7 @@ return {
 			clang_format_custom = {
 				command = 'clang-format',
 				args = {
-					'--style="{BasedOnStyle: Google, IndentWidth: 4}"',
+					'--style={BasedOnStyle: Google, IndentWidth: 4}',
 					'--assume-filename=$FILENAME',
 				},
 				stdin = true,
@@ -40,7 +40,7 @@ return {
 				stdin = true,
 			},
 			texfmt_custom = {
-				commans = 'texfmt',
+				command = 'texfmt',
 				args = { '-t 4', '-p', vim.api.nvim_buf_get_name (0) },
 				stdin = true,
 			},
@@ -60,6 +60,7 @@ return {
 			python = { 'autopep8_custom' },
 			lua = { 'stylua_custom' },
 			tex = { 'texfmt_custom' },
+			java = { 'clang_format_custom' },
 		},
 	},
 }
