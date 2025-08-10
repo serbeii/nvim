@@ -44,6 +44,25 @@ return {
 				args = { '-t 4', '-p', vim.api.nvim_buf_get_name (0) },
 				stdin = true,
 			},
+			java_format_custom = {
+				command = 'clang-format',
+				args = {
+					'--style={ '
+						.. 'Language: Java, '
+						.. 'BasedOnStyle: Google, '
+						.. 'IndentWidth: 4, '
+						.. 'ColumnLimit: 80, '
+						.. 'AlignOperands: false, '
+						.. 'BinPackParameters: false, '
+						.. 'AllowAllParametersOfDeclarationOnNextLine: false, '
+						.. 'BreakBeforeBraces: Allman, '
+						.. 'BreakAfterJavaFieldAnnotations: true, '
+						.. 'BreakStringLiterals: true '
+						.. '}',
+					'$FILENAME',
+				},
+				stdin = true,
+			},
 		},
 		formatters_by_ft = {
 			javascript = { 'prettier_custom' },
@@ -60,7 +79,7 @@ return {
 			python = { 'autopep8_custom' },
 			lua = { 'stylua_custom' },
 			tex = { 'texfmt_custom' },
-			java = { 'clang_format_custom' },
+			java = { 'java_format_custom' },
 		},
 	},
 }
