@@ -3,8 +3,15 @@ return {
 		"neovim/nvim-lspconfig",
 		opts = function(_, opts)
 			opts.servers.vtsls = opts.servers.vtsls or {}
-			opts.servers.vtsls.filetypes = opts.servers.vtsls.filetypes or {}
-			table.insert(opts.servers.vtsls.filetypes, "vue")
+			opts.servers.vtsls.filetypes = {
+            "javascript",
+            "javascriptreact",
+            "javascript.jsx",
+            "typescript",
+            "typescriptreact",
+            "typescript.tsx",
+            "vue",
+            }
 			LazyVim.extend(opts.servers.vtsls, "settings.vtsls.tsserver.globalPlugins", {
 				{
 					name = "@vue/typescript-plugin",
